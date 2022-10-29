@@ -3,7 +3,7 @@ type MyPick<T, K extends keyof T> = {
 }
 //ts
 //1. P in K 类型键值遍历
-//2. keyof T 返回联合类型 'title' | 'completed' | 'description'
+//2. keyof T(interface) 返回union联合类型 'title' | 'completed' | 'description'
 //3. extends 联合类型 'title' | 'completed'
 //4. extends keyof 限制只能是 T 的子键值
 

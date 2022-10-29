@@ -2,7 +2,7 @@ type MyReadonly<T> = {
     readonly [P in keyof T]: T[P]
 }
 //ts
-//1.P in keyof T 遍历接口的键值
+//1.P in keyof T 遍历接口interface的键值
 //2. readonly 限制属性为只读
 
 //js
