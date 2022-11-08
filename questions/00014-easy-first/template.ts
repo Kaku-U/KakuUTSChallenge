@@ -1,7 +1,7 @@
 // type First<T extends any[]> = T extends [] ? never : T[0] // solution0
 // type First<T extends any[]> = T['length'] extends 0 ? never : T[0] // solution1
 // type First<T extends any[]> = T[0] extends T[number] ? T[0] : never //solution2
-type First<T extends any[]> = T extends [infer First, ... infer Rest] ? First : never//solution3
+type First<T extends any[]> = T extends [infer First, ... infer Rest] ? First : never// solution3
 
 type f = First<[]>
 // T[number]
@@ -13,8 +13,8 @@ type f = First<[]>
 // 看看某个值是不是在 Union 里面 typeA extends unionB ? true : false
 // type t2 = T[0] extends ages[number] ? "true" : "false"
 function MyFirstFunc(t: any) {
-    const {first, ...rest} = t
-    return first ? first : 'never'
+  const { first, ...rest } = t
+  return first || 'never'
 }
 // 知识点
 // 1. extends 类型条件判断 T 是否为空数组[]
