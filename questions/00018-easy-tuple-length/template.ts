@@ -1,6 +1,5 @@
 type Length<T extends readonly any[]> = T['length']
 
-
 // 知识点
 // 1.接受一个readonly 的数组
 // 2.T['length'] 返回类型里 'length' 属性的类型
